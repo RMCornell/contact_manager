@@ -11,11 +11,16 @@
 </p>
 
 <p>
-  <strong>Phone Number:</strong>
+  <strong>Phone Number(s):</strong><br/>
   <% @person.phone_numbers.map do |x| %>
-        <%= x.number %>
+        <%= x.number %><br/>
     <% end %>
 </p>
+
+<p>
+  <%= link_to 'Add phone number', new_phone_number_path %>
+</p>
+
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>
