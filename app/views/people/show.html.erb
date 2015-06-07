@@ -17,10 +17,6 @@
     <% end %>
 </p>
 
-<p>
-  <%= link_to 'Add phone number', new_phone_number_path %>
-</p>
-
-
+<%= link_to 'Add phone number', new_phone_number_path(person_id: @person.id) %>
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>
